@@ -1,4 +1,3 @@
-
 ampLeft = 0.05;   % Amplitude for left sound channel  
 ampRight = 20;   % Amplitude for right sound channel  
 freqLeft = 5000;   % Frequency for left sound channel   
@@ -15,4 +14,3 @@ pause(t);
 sound(yRight, fs, 24); 
 pause(t);
 sound([yLeft; yRight], fs, 24); 
-
