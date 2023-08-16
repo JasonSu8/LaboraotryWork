@@ -2,7 +2,7 @@ ampLeft = 0.05;   % Amplitude for left sound channel
 ampRight = 20;   % Amplitude for right sound channel  
 freqLeft = 5000;   % Frequency for left sound channel   
 freqRight = 12000;   % Frequency for right sound channel
-fs = 96000;   % sampling frequency
+fs = 192000;   % sampling frequency
 t = 5;   % Sound duration
 
 x = 0:(fs * t - 1); 
