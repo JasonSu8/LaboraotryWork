@@ -30,7 +30,7 @@ if video.count_frames() == len(xx) and video.count_frames() == len(yy):
 # step 8            
         if xx[frameNum] > xMin and xx[frameNum] < xMax and yy[frameNum] > yMin and yy[frameNum] < yMax:
             image = video.get_data(frameNum)
-            imageio.imwrite('image.jpg', image)
+            imageio.imwrite('image' + str(frameNum) + '.jpg', image)
 
 # step 9     
 video.close()
