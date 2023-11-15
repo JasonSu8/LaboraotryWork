@@ -10,9 +10,9 @@ video_path = 'D:/AAA/'
 ckpt_path = 'D:/BBB/'
 
 x_min = 111
-x_max = 136
-y_min = 222
-y_max = 474
+x_max = 281
+y_min = 333
+y_max = 358
 
 number_left_boundary = [8, 35, 62, 89, 116, 143]
 number_right_boundary = [27, 54, 81, 108, 135, 162]
