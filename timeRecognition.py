@@ -6,8 +6,8 @@ import imageio
 import numpy as np
 
 # step 2
-video_path = 'D:/AAA/'
-ckpt_path = 'D:/BBB/'
+video_path = 'D:/AAA/video.mp4'
+ckpt_path = 'D:/BBB/weight.ckpt'
 
 x_min = 111
 x_max = 281
@@ -40,10 +40,10 @@ with tf.Graph().as_default() as graph:
     # step 5
     with tf.Session(config = config, graph = graph) as sess:
         sess.run(init)
-        saver_network.restore(sess, ckpt_path + 'weight.ckpt')
+        saver_network.restore(sess, ckpt_path)
         
         # step 6
-        video = imageio.get_reader(video_path + 'video.mp4', 'ffmpeg')    
+        video = imageio.get_reader(video_path, 'ffmpeg')    
         for i in range(video.count_frames()):
             image = vid.get_data(i)
             time_image = image[y_min: y_max, x_min: x_max, :]
