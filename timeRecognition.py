@@ -40,10 +40,10 @@ with tf.Graph().as_default() as graph:
     # step 5
     with tf.Session(config = config, graph = graph) as sess:
         sess.run(init)
-        saver_network.restore(sess, ckpt_path)
+        saver_network.restore(sess, ckpt_path + 'weight.ckpt')
         
         # step 6
-        video = imageio.get_reader(video_path, 'ffmpeg')    
+        video = imageio.get_reader(video_path + 'video.mp4', 'ffmpeg')    
         for i in range(video.count_frames()):
             image = vid.get_data(i)
             time_image = image[y_min: y_max, x_min: x_max, :]
